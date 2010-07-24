@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+
 package Dist::Zilla::Plugin::MetaProvides::Class;
 
 # ABSTRACT: Scans Dist::Zilla's .pm files and tries to identify classes using Class::Discover.
@@ -7,10 +8,7 @@ package Dist::Zilla::Plugin::MetaProvides::Class;
 # $Id:$
 use Moose;
 use Moose::Autobox;
-use MooseX::Has::Sugar;
-use MooseX::Types::Moose             (':all');
-use Dist::Zilla::MetaProvides::Types (':all');
-use Class::Discover                  ();
+use Class::Discover ();
 
 use aliased 'Dist::Zilla::MetaProvides::ProvideRecord' => 'Record', ();
 
@@ -22,7 +20,6 @@ use aliased 'Dist::Zilla::MetaProvides::ProvideRecord' => 'Record', ();
 
 use namespace::autoclean;
 with 'Dist::Zilla::Role::MetaProvider::Provider';
-
 
 =head1 ROLE SATISFYING METHODS
 
@@ -38,7 +35,7 @@ A conformant function to the L<Dist::Zila::Role::MetaProvider::Provider> Role.
 
 sub provides {
   my $self        = shift;
-  my $perl_module = sub { $_->name =~ m{^lib\/.*\.(pm|pod)$}  };
+  my $perl_module = sub { $_->name =~ m{^lib\/.*\.(pm|pod)$} };
   my $get_records = sub {
     $self->_classes_for( $_->name, $_->content );
   };
@@ -55,6 +52,7 @@ sub provides {
 =head3 returns: Array of L<Dist::Zilla::MetaProvides::ProvideRecord>
 
 =cut
+
 sub _classes_for {
   my ( $self, $filename, $content ) = @_;
   my ($scanparams) = {
@@ -74,8 +72,6 @@ sub _classes_for {
   # I'm being bad and using a private function, but meh.
   return [ Class::Discover->_search_for_classes_in_file( $scanparams, \$content ) ]->map($to_record)->flatten;
 }
-
-
 
 =head1 SEE ALSO
 
