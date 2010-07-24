@@ -61,7 +61,7 @@ sub _classes_for {
     file     => $filename,
   };
   my $to_record = sub {
-    Dist::Zilla::MetaProvides::ProvideRecord::Record->new(
+    Dist::Zilla::MetaProvides::ProvideRecord->new(
       module  => $_->keys->at(0),
       file    => $filename,
       version => $_->values->at(0)->{version},
