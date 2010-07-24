@@ -10,7 +10,7 @@ use Moose;
 use Moose::Autobox;
 use Class::Discover ();
 
-use aliased 'Dist::Zilla::MetaProvides::ProvideRecord' => 'Record', ();
+use Dist::Zilla::MetaProvides::ProvideRecord;
 
 =head1 ROLES
 
@@ -61,7 +61,7 @@ sub _classes_for {
     file     => $filename,
   };
   my $to_record = sub {
-    Record->new(
+    Dist::Zilla::MetaProvides::ProvideRecord::Record->new(
       module  => $_->keys->at(0),
       file    => $filename,
       version => $_->values->at(0)->{version},
