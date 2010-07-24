@@ -1,8 +1,9 @@
 use strict;
 use warnings;
+
 package Dist::Zilla::Plugin::MetaProvides::Class;
 BEGIN {
-  $Dist::Zilla::Plugin::MetaProvides::Class::VERSION = '1.10034117';
+  $Dist::Zilla::Plugin::MetaProvides::Class::VERSION = '1.11034201';
 }
 
 # ABSTRACT: Scans Dist::Zilla's .pm files and tries to identify classes using Class::Discover.
@@ -10,28 +11,25 @@ BEGIN {
 # $Id:$
 use Moose;
 use Moose::Autobox;
-use MooseX::Has::Sugar;
-use MooseX::Types::Moose             (':all');
-use Dist::Zilla::MetaProvides::Types (':all');
-use Class::Discover                  ();
+use Class::Discover ();
 
-use aliased 'Dist::Zilla::MetaProvides::ProvideRecord' => 'Record', ();
+use Dist::Zilla::MetaProvides::ProvideRecord;
 
 
 use namespace::autoclean;
 with 'Dist::Zilla::Role::MetaProvider::Provider';
 
 
-
 sub provides {
   my $self        = shift;
-  my $perl_module = sub { $_->name =~ m{^lib\/.*\.(pm|pod)$}  };
+  my $perl_module = sub { $_->name =~ m{^lib\/.*\.(pm|pod)$} };
   my $get_records = sub {
     $self->_classes_for( $_->name, $_->content );
   };
 
   return $self->zilla->files->grep($perl_module)->map($get_records)->flatten;
 }
+
 
 sub _classes_for {
   my ( $self, $filename, $content ) = @_;
@@ -41,7 +39,7 @@ sub _classes_for {
     file     => $filename,
   };
   my $to_record = sub {
-    Record->new(
+    Dist::Zilla::MetaProvides::ProvideRecord->new(
       module  => $_->keys->at(0),
       file    => $filename,
       version => $_->values->at(0)->{version},
@@ -52,8 +50,6 @@ sub _classes_for {
   # I'm being bad and using a private function, but meh.
   return [ Class::Discover->_search_for_classes_in_file( $scanparams, \$content ) ]->map($to_record)->flatten;
 }
-
-
 
 
 __PACKAGE__->meta->make_immutable;
@@ -69,7 +65,7 @@ Dist::Zilla::Plugin::MetaProvides::Class - Scans Dist::Zilla's .pm files and tri
 
 =head1 VERSION
 
-version 1.10034117
+version 1.11034201
 
 =head1 ROLES
 

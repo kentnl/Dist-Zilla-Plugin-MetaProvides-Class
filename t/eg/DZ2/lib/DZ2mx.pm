@@ -1,4 +1,4 @@
-
+# ABSTRACT: turns baubles into trinkets
 # $Id:$
 use strict;
 use warnings;
