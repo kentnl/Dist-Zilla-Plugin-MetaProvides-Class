@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.11044406 2010-11-03 07:03:05 Pacific/Auckland
           Update toolchain.
           Add meta_noindex support from Role::MetaProvides::Provides
 
