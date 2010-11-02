@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::MetaProvides::Class;
 BEGIN {
-  $Dist::Zilla::Plugin::MetaProvides::Class::VERSION = '1.11034201';
+  $Dist::Zilla::Plugin::MetaProvides::Class::VERSION = '1.11044406';
 }
 
 # ABSTRACT: Scans Dist::Zilla's .pm files and tries to identify classes using Class::Discover.
@@ -19,7 +19,6 @@ use Dist::Zilla::MetaProvides::ProvideRecord;
 use namespace::autoclean;
 with 'Dist::Zilla::Role::MetaProvider::Provider';
 
-
 sub provides {
   my $self        = shift;
   my $perl_module = sub { $_->name =~ m{^lib\/.*\.(pm|pod)$} };
@@ -27,7 +26,9 @@ sub provides {
     $self->_classes_for( $_->name, $_->content );
   };
 
-  return $self->zilla->files->grep($perl_module)->map($get_records)->flatten;
+  return $self->_apply_meta_noindex(
+    $self->zilla->files->grep($perl_module)->map($get_records)->flatten
+  );
 }
 
 
@@ -65,11 +66,29 @@ Dist::Zilla::Plugin::MetaProvides::Class - Scans Dist::Zilla's .pm files and tri
 
 =head1 VERSION
 
-version 1.11034201
+version 1.11044406
 
 =head1 ROLES
 
 =head2 L<Dist::Zilla::Role::MetaProvider::Provider>
+
+=head2 L<< C<meta_noindex>|Dist::Zilla::Role::MetaProvider::Provider/meta_noindex >>
+
+This is a utility for people who are also using L<< C<MetaNoIndex>|Dist::Zilla::Plugin::MetaNoIndex >>,
+so that its settings can be used to eliminate items from the 'provides' list.
+
+=over 4
+
+=item * DEFAULT: meta_noindex = 0
+
+By default, do nothing unusual.
+
+=item * meta_noindex = 1
+
+When a module meets the criteria provided to L<< C<MetaNoIndex>|Dist::Zilla::Plugin::MetaNoIndex >>,
+eliminate it from the metadata shipped to L<Dist::Zilla>
+
+=back
 
 =head1 ROLE SATISFYING METHODS
 

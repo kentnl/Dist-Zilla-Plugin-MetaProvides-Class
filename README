@@ -3,10 +3,23 @@ NAME
     and tries to identify classes using Class::Discover.
 
 VERSION
-    version 1.11034201
+    version 1.11044406
 
 ROLES
   Dist::Zilla::Role::MetaProvider::Provider
+  "meta_noindex"
+    This is a utility for people who are also using "MetaNoIndex", so that
+    its settings can be used to eliminate items from the 'provides' list.
+
+    *   DEFAULT: meta_noindex = 0
+
+        By default, do nothing unusual.
+
+    *   meta_noindex = 1
+
+        When a module meets the criteria provided to "MetaNoIndex",
+        eliminate it from the metadata shipped to Dist::Zilla
+
 ROLE SATISFYING METHODS
   provides
     A conformant function to the Dist::Zila::Role::MetaProvider::Provider
