@@ -7,12 +7,13 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
   'build_requires' => {
-    'Dist::Zilla::App::Tester' => '0',
+    'Dist::Zilla::Util::Test::KENTNL' => '0.01000011',
     'English' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
     'Module::Build' => '0.3601',
-    'MooseX::Declare' => '0',
+    'Test::Fatal' => '0',
+    'Test::Moose' => '0',
     'Test::More' => '0.88'
   },
   'configure_requires' => {
@@ -23,7 +24,7 @@ my %module_build_args = (
     'Kent Fredric <kentnl@cpan.org>'
   ],
   'dist_name' => 'Dist-Zilla-Plugin-MetaProvides-Class',
-  'dist_version' => '1.11044406',
+  'dist_version' => '1.12044910',
   'license' => 'perl',
   'module_name' => 'Dist::Zilla::Plugin::MetaProvides::Class',
   'recommends' => {},
@@ -31,7 +32,7 @@ my %module_build_args = (
   'requires' => {
     'Class::Discover' => '0',
     'Dist::Zilla::MetaProvides::ProvideRecord' => '0',
-    'Dist::Zilla::Plugin::MetaProvides' => '1.11044405',
+    'Dist::Zilla::Plugin::MetaProvides' => '1.12044806',
     'Dist::Zilla::Role::MetaProvider::Provider' => '0',
     'Moose' => '0',
     'Moose::Autobox' => '0',
