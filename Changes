@@ -1,6 +1,11 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          Update deps to match those of ::Package
+          Add some realistic tests.
+          Bumped the minor. NOTICE: meta_noindex is on
+            by default, so if you use the MetaNoIndex plugin
+            it will do the right thing.
 
 1.11044406 2010-11-03 07:03:05 Pacific/Auckland
           Update toolchain.

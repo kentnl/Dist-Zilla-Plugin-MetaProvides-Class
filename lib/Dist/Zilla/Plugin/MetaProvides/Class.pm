@@ -20,6 +20,7 @@ use Dist::Zilla::MetaProvides::ProvideRecord;
 
 use namespace::autoclean;
 with 'Dist::Zilla::Role::MetaProvider::Provider';
+
 =head2 L<< C<meta_noindex>|Dist::Zilla::Role::MetaProvider::Provider/meta_noindex >>
 
 This is a utility for people who are also using L<< C<MetaNoIndex>|Dist::Zilla::Plugin::MetaNoIndex >>,
@@ -27,16 +28,20 @@ so that its settings can be used to eliminate items from the 'provides' list.
 
 =over 4
 
-=item * DEFAULT: meta_noindex = 0
+=item * meta_noindex = 0
 
 By default, do nothing unusual.
 
-=item * meta_noindex = 1
+=item * DEFAULT: meta_noindex = 1
 
 When a module meets the criteria provided to L<< C<MetaNoIndex>|Dist::Zilla::Plugin::MetaNoIndex >>,
 eliminate it from the metadata shipped to L<Dist::Zilla>
 
 =back
+
+=cut
+
+has '+meta_noindex' => ( default => sub { 1 } );
 
 =head1 ROLE SATISFYING METHODS
 
@@ -57,9 +62,7 @@ sub provides {
     $self->_classes_for( $_->name, $_->content );
   };
 
-  return $self->_apply_meta_noindex(
-    $self->zilla->files->grep($perl_module)->map($get_records)->flatten
-  );
+  return $self->_apply_meta_noindex( $self->zilla->files->grep($perl_module)->map($get_records)->flatten );
 }
 
 =head1 PRIVATE METHODS
