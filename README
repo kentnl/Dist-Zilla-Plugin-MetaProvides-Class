@@ -3,7 +3,7 @@ NAME
     and tries to identify classes using Class::Discover.
 
 VERSION
-    version 1.12044910
+    version 1.12044911
 
 ROLES
   Dist::Zilla::Role::MetaProvider::Provider

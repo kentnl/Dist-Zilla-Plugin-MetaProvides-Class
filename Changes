@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-Plugin-MetaProvides-Class
 
+1.12044911 2010-11-08 12:10:31 Pacific/Auckland
+          Reinsert MooseX::Declare into deps, got lost due to the t/ to corpus/ move.
+
 1.12044910 2010-11-08 11:56:20 Pacific/Auckland
           Update deps to match those of ::Package
           Add some realistic tests.

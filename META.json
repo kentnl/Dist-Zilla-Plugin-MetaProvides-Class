@@ -63,6 +63,7 @@
             "English" : 0,
             "File::Find" : 0,
             "File::Temp" : 0,
+            "MooseX::Declare" : 0,
             "Test::Fatal" : 0,
             "Test::Moose" : 0,
             "Test::More" : "0.88"
@@ -75,7 +76,7 @@
    "provides" : {
       "Dist::Zilla::Plugin::MetaProvides::Class" : {
          "file" : "lib/Dist/Zilla/Plugin/MetaProvides/Class.pm",
-         "version" : "1.12044910"
+         "version" : "1.12044911"
       }
    },
    "release_status" : "stable",
@@ -87,7 +88,7 @@
          "web" : "http://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-Class/tree"
       }
    },
-   "version" : "1.12044910",
+   "version" : "1.12044911",
    "x_BuiltWith" : {
       "modules" : {
          "Class::Discover" : "1.000003",
@@ -103,6 +104,7 @@
          "Module::Build" : "0.3607",
          "Moose" : "1.17",
          "Moose::Autobox" : "0.11",
+         "MooseX::Declare" : "0.34",
          "Test::Fatal" : "0.003",
          "Test::Moose" : "1.17",
          "Test::More" : "0.96",
