@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.12044910 2010-11-08 11:56:20 Pacific/Auckland
           Update deps to match those of ::Package
           Add some realistic tests.
           Bumped the minor. NOTICE: meta_noindex is on
