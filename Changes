@@ -3,6 +3,7 @@ Revision history for {{$dist->name}}
 {{$NEXT}}
  [Packaging]
  - Move to @Author::KENTNL
+ - Stricitify critic.
 
 1.12044911 2010-11-08 12:10:31 Pacific/Auckland
           Reinsert MooseX::Declare into deps, got lost due to the t/ to corpus/ move.
