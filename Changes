@@ -5,6 +5,12 @@ Revision history for {{$dist->name}}
  - Move to @Author::KENTNL
  - Stricitify critic.
 
+ [Documentation]
+ - Fix some bad POD links.
+
+ [Internals]
+ - Reorederd some code to reduce cognitive complexity.
+
 1.12044911 2010-11-08 12:10:31 Pacific/Auckland
           Reinsert MooseX::Declare into deps, got lost due to the t/ to corpus/ move.
 

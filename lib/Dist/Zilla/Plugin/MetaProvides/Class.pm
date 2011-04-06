@@ -47,7 +47,7 @@ has '+meta_noindex' => ( default => sub { 1 } );
 
 =head2 provides
 
-A conformant function to the L<Dist::Zila::Role::MetaProvider::Provider> Role.
+A conformant function to the L<Dist::Zilla::Role::MetaProvider::Provider> Role.
 
 =head3 signature: $plugin->provides()
 
@@ -57,12 +57,19 @@ A conformant function to the L<Dist::Zila::Role::MetaProvider::Provider> Role.
 
 sub provides {
   my $self        = shift;
-  my $perl_module = sub { $_->name =~ m{^lib\/.*\.(pm|pod)$} };
+  my $perl_module = sub {
+    ## no critic ( RegularExpressions )
+    $_->name =~ m{^lib[/].*[.](pm|pod)$}
+  };
   my $get_records = sub {
     $self->_classes_for( $_->name, $_->content );
   };
 
-  return $self->_apply_meta_noindex( $self->zilla->files->grep($perl_module)->map($get_records)->flatten );
+  my ( @files ) = $self->zilla->files->flatten;
+
+  my ( @records ) = @files->grep($perl_module)->map($get_records)->flatten ;
+
+  return $self->_apply_meta_noindex( @records );
 }
 
 =head1 PRIVATE METHODS
@@ -92,6 +99,8 @@ sub _classes_for {
   };
 
   # I'm being bad and using a private function, but meh.
+  # We know this is bad :(
+  ## no critic ( ProtectPrivateSubs )
   return [ Class::Discover->_search_for_classes_in_file( $scanparams, \$content ) ]->map($to_record)->flatten;
 }
 
@@ -106,5 +115,7 @@ sub _classes_for {
 =cut
 
 __PACKAGE__->meta->make_immutable;
+no Moose;
+
 1;
 
