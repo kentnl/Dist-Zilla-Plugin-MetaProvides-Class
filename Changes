@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.12060312 2011-04-07T00:04:18Z
  - Mostly a maintenance release. No user visible changes should exist.
 
  [Dependencies::Devel]
