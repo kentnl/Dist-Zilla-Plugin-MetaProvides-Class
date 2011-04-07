@@ -59,17 +59,17 @@ sub provides {
   my $self        = shift;
   my $perl_module = sub {
     ## no critic ( RegularExpressions )
-    $_->name =~ m{^lib[/].*[.](pm|pod)$}
+    $_->name =~ m{^lib[/].*[.](pm|pod)$};
   };
   my $get_records = sub {
     $self->_classes_for( $_->name, $_->content );
   };
 
-  my ( @files ) = $self->zilla->files->flatten;
+  my (@files) = $self->zilla->files->flatten;
 
-  my ( @records ) = @files->grep($perl_module)->map($get_records)->flatten ;
+  my (@records) = @files->grep($perl_module)->map($get_records)->flatten;
 
-  return $self->_apply_meta_noindex( @records );
+  return $self->_apply_meta_noindex(@records);
 }
 
 =head1 PRIVATE METHODS
