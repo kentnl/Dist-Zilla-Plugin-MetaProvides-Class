@@ -1,6 +1,11 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+ - Mostly a maintenance release. No user visible changes should exist.
+
+ [Dependencies::Devel]
+ - Move devel dep adverts to @Author::KENTNL
+
  [Documentation]
  - Fix some bad POD links.
 
@@ -11,6 +16,10 @@ Revision history for {{$dist->name}}
  - Move to @Author::KENTNL
  - Stricitify critic.
  - Reworked Changes for CPAN::Changes.
+
+ [Tests]
+ - Added CPAN::Changes.
+ - Removed Portability.
 
 1.12044911 2010-11-07T23:10:31Z
  - Reinsert MooseX::Declare into deps, got lost due to the t/ to corpus/
