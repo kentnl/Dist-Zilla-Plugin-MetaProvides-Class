@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::MetaProvides::Class;
 BEGIN {
-  $Dist::Zilla::Plugin::MetaProvides::Class::VERSION = '1.12044911';
+  $Dist::Zilla::Plugin::MetaProvides::Class::VERSION = '1.12060312';
 }
 
 # ABSTRACT: Scans Dist::Zilla's .pm files and tries to identify classes using Class::Discover.
@@ -25,12 +25,19 @@ has '+meta_noindex' => ( default => sub { 1 } );
 
 sub provides {
   my $self        = shift;
-  my $perl_module = sub { $_->name =~ m{^lib\/.*\.(pm|pod)$} };
+  my $perl_module = sub {
+    ## no critic ( RegularExpressions )
+    $_->name =~ m{^lib[/].*[.](pm|pod)$};
+  };
   my $get_records = sub {
     $self->_classes_for( $_->name, $_->content );
   };
 
-  return $self->_apply_meta_noindex( $self->zilla->files->grep($perl_module)->map($get_records)->flatten );
+  my (@files) = $self->zilla->files->flatten;
+
+  my (@records) = @files->grep($perl_module)->map($get_records)->flatten;
+
+  return $self->_apply_meta_noindex(@records);
 }
 
 
@@ -51,11 +58,15 @@ sub _classes_for {
   };
 
   # I'm being bad and using a private function, but meh.
+  # We know this is bad :(
+  ## no critic ( ProtectPrivateSubs )
   return [ Class::Discover->_search_for_classes_in_file( $scanparams, \$content ) ]->map($to_record)->flatten;
 }
 
 
 __PACKAGE__->meta->make_immutable;
+no Moose;
+
 1;
 
 
@@ -68,7 +79,7 @@ Dist::Zilla::Plugin::MetaProvides::Class - Scans Dist::Zilla's .pm files and tri
 
 =head1 VERSION
 
-version 1.12044911
+version 1.12060312
 
 =head1 ROLES
 
@@ -96,7 +107,7 @@ eliminate it from the metadata shipped to L<Dist::Zilla>
 
 =head2 provides
 
-A conformant function to the L<Dist::Zila::Role::MetaProvider::Provider> Role.
+A conformant function to the L<Dist::Zilla::Role::MetaProvider::Provider> Role.
 
 =head3 signature: $plugin->provides()
 
@@ -124,7 +135,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Kent Fredric.
+This software is copyright (c) 2011 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
