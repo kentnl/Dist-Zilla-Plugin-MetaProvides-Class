@@ -1,6 +1,33 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+ - Maintenance release.
+
+ [Dependencies::Changed]
+ - develop recommends : Dist::Zilla::PluginBundle::Author::KENTNL::Lite
+   0.01009803 -> v1.3.0
+ - develop suggests : Dist::Zilla::PluginBundle::Author::KENTNL
+   v1.0.0 -> v1.3.0
+ - runtime requires : Dist::Zilla::MetaProvides::ProvideRecord
+   0 -> 1.14000000
+
+ [Dependencies::New]
+ - runtime requires : perl 5.006
+ - runtime requires : strict
+ - runtime requires : warnings
+
+ [Dependencies::Removed]
+ - test requires : English
+
+ [Internals]
+ - add $AUTHORITY to all packages
+ - move $VERSION out of BEGIN
+
+ [Packaging]
+ - Update LICENSE (Year, Indent, Address)
+ - Move accessory tests to xt/
+ - git uri's moved to https:// versions
+ - export x_authority
 
 1.12060501 2011-04-08T13:51:50Z
  [BugFix]

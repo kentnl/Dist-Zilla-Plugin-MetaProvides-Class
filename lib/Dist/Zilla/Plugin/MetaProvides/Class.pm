@@ -10,7 +10,7 @@ use Moose;
 use Moose::Autobox;
 use Class::Discover ();
 
-use Dist::Zilla::MetaProvides::ProvideRecord;
+use Dist::Zilla::MetaProvides::ProvideRecord 1.14000000;
 
 =head1 ROLES
 
