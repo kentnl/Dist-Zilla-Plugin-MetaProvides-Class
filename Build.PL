@@ -6,40 +6,42 @@ use Module::Build 0.3601;
 
 
 my %module_build_args = (
-  'build_requires' => {
-    'Dist::Zilla::Util::Test::KENTNL' => '0.01000011',
-    'English' => '0',
-    'File::Find' => '0',
-    'File::Temp' => '0',
-    'Module::Build' => '0.3601',
-    'MooseX::Declare' => '0',
-    'Test::Fatal' => '0',
-    'Test::Moose' => '0',
-    'Test::More' => '0.96'
+  "build_requires" => {
+    "Dist::Zilla::Util::Test::KENTNL" => "0.01000011",
+    "File::Find" => 0,
+    "File::Temp" => 0,
+    "Module::Build" => "0.3601",
+    "MooseX::Declare" => 0,
+    "Test::Fatal" => 0,
+    "Test::Moose" => 0,
+    "Test::More" => "0.96"
   },
-  'configure_requires' => {
-    'Module::Build' => '0.3601'
+  "configure_requires" => {
+    "Module::Build" => "0.3601"
   },
-  'dist_abstract' => 'Scans Dist::Zilla\'s .pm files and tries to identify classes using Class::Discover.',
-  'dist_author' => [
-    'Kent Fredric <kentnl@cpan.org>'
+  "dist_abstract" => "Scans Dist::Zilla's .pm files and tries to identify classes using Class::Discover.",
+  "dist_author" => [
+    "Kent Fredric <kentnl\@cpan.org>"
   ],
-  'dist_name' => 'Dist-Zilla-Plugin-MetaProvides-Class',
-  'dist_version' => '1.12060501',
-  'license' => 'perl',
-  'module_name' => 'Dist::Zilla::Plugin::MetaProvides::Class',
-  'recommends' => {},
-  'recursive_test_files' => 1,
-  'requires' => {
-    'Class::Discover' => '0',
-    'Dist::Zilla::MetaProvides::ProvideRecord' => '0',
-    'Dist::Zilla::Plugin::MetaProvides' => '1.12044806',
-    'Dist::Zilla::Role::MetaProvider::Provider' => '0',
-    'Moose' => '0',
-    'Moose::Autobox' => '0',
-    'namespace::autoclean' => '0'
+  "dist_name" => "Dist-Zilla-Plugin-MetaProvides-Class",
+  "dist_version" => "1.14000000",
+  "license" => "perl",
+  "module_name" => "Dist::Zilla::Plugin::MetaProvides::Class",
+  "recommends" => {},
+  "recursive_test_files" => 1,
+  "requires" => {
+    "Class::Discover" => 0,
+    "Dist::Zilla::MetaProvides::ProvideRecord" => "1.14000000",
+    "Dist::Zilla::Plugin::MetaProvides" => "1.12044806",
+    "Dist::Zilla::Role::MetaProvider::Provider" => 0,
+    "Moose" => 0,
+    "Moose::Autobox" => 0,
+    "namespace::autoclean" => 0,
+    "perl" => "5.006",
+    "strict" => 0,
+    "warnings" => 0
   },
-  'script_files' => []
+  "script_files" => []
 );
 
 
