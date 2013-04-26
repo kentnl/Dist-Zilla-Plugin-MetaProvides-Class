@@ -5,21 +5,22 @@ Revision history for {{$dist->name}}
 1.14000000 2012-05-09T07:14:20Z
  - Maintenance release.
 
- [Dependencies::Changed]
- - develop recommends : Dist::Zilla::PluginBundle::Author::KENTNL::Lite
-   0.01009803 -> v1.3.0
- - develop suggests : Dist::Zilla::PluginBundle::Author::KENTNL
-   v1.0.0 -> v1.3.0
- - runtime requires : Dist::Zilla::MetaProvides::ProvideRecord
-   0 -> 1.14000000
+ [Dependencies::Added / runtime requires]
+ - perl 5.006
+ - strict
+ - warnings
 
- [Dependencies::New]
- - runtime requires : perl 5.006
- - runtime requires : strict
- - runtime requires : warnings
+ [Dependencies::Changed / develop recommends]
+ - Dist::Zilla::PluginBundle::Author::KENTNL::Lite 0.01009803 → v1.3.0
 
- [Dependencies::Removed]
- - test requires : English
+ [Dependencies::Changed / develop suggests]
+ - Dist::Zilla::PluginBundle::Author::KENTNL v1.0.0 → v1.3.0
+
+ [Dependencies::Changed / runtime requires]
+ - Dist::Zilla::MetaProvides::ProvideRecord 0 → 1.14000000
+
+ [Dependencies::Removed / test requires]
+ - English
 
  [Internals]
  - add $AUTHORITY to all packages
@@ -36,14 +37,29 @@ Revision history for {{$dist->name}}
  - rt#67325 : Should now depend on Test::More 0.96 to solve tests failing
    on earlier versions.
 
- [Dependencies:Tests]
- - Test::More is now 0.96, not 0.88
+ [Dependencies::Changed / test requires]
+ - Test::More 0.88 → 0.96
 
 1.12060312 2011-04-07T00:04:18Z
  - Mostly a maintenance release. No user visible changes should exist.
 
- [Dependencies::Devel]
- - Move devel dep adverts to @Author::KENTNL
+ [Dependencies::Added / develop recommends]
+ - Dist::Zilla::PluginBundle::Author::KENTNL::Lite 0.01009803
+
+ [Dependencies::Added / develop requires]
+ - Dist::Zilla::PluginBundle::Author::KENTNL::Lite
+
+ [Dependencies::Added / develop suggests]
+ - Dist::Zilla::PluginBundle::Author::KENTNL v1.0.0
+
+ [Dependencies::Removed / develop recommends]
+ - Dist::Zilla::PluginBundle::KENTNL::Lite 0.01009803
+
+ [Dependencies::Removed / develop requires]
+ - Dist::Zilla::PluginBundle::KENTNL::Lite
+
+ [Dependencies::Removed / develop suggests]
+ - Dist::Zilla::PluginBundle::KENTNL 0.01017119
 
  [Documentation]
  - Fix some bad POD links.
@@ -64,18 +80,96 @@ Revision history for {{$dist->name}}
  - Reinsert MooseX::Declare into deps, got lost due to the t/ to corpus/
    move.
 
+ [Dependencies::Added / test requires]
+ - MooseX::Declare
+
 1.12044910 2010-11-07T22:56:20Z
  - Update deps to match those of ::Package
  - Add some realistic tests.
  - Bumped the minor. NOTICE: meta_noindex is on by default, so if you use
    the MetaNoIndex plugin it will do the right thing.
 
+ [Dependencies::Added / develop requires]
+ - Dist::Zilla::Plugin::Bootstrap::lib
+ - Dist::Zilla::Plugin::MetaNoIndex
+
+ [Dependencies::Added / runtime suggests]
+ - Dist::Zilla::Plugin::MetaNoIndex
+
+ [Dependencies::Added / test requires]
+ - Dist::Zilla::Util::Test::KENTNL 0.01000011
+ - Test::Fatal
+ - Test::Moose
+
+ [Dependencies::Added / test suggests]
+ - Dist::Zilla::Plugin::MetaNoIndex
+
+ [Dependencies::Changed / runtime requires]
+ - Dist::Zilla::Plugin::MetaProvides 1.11044405 → 1.12044806
+
+ [Dependencies::Removed / test requires]
+ - Dist::Zilla::App::Tester
+ - MooseX::Declare
+
 1.11044406 2010-11-02T18:03:05Z
  - Update toolchain.
  - Add meta_noindex support from Role::MetaProvides::Provides
 
+ [Dependencies::Added / develop recommends]
+ - Dist::Zilla::PluginBundle::KENTNL::Lite 0.01009803
+
+ [Dependencies::Added / develop requires]
+ - Dist::Zilla::PluginBundle::KENTNL::Lite
+
+ [Dependencies::Added / develop suggests]
+ - Dist::Zilla::PluginBundle::KENTNL 0.01017119
+
+ [Dependencies::Added / test requires]
+ - English
+
+ [Dependencies::Changed / runtime requires]
+ - Dist::Zilla::Plugin::MetaProvides 1.11034201 → 1.11044405
+
 1.11034201 2010-07-24T13:41:58Z
  - History forks here from Dist::Zilla::Plugin::MetaProvides
+
+ [Dependencies::Added / runtime requires]
+ - Dist::Zilla::MetaProvides::ProvideRecord
+ - Dist::Zilla::Plugin::MetaProvides 1.11034201
+ - Dist::Zilla::Role::MetaProvider::Provider
+
+ [Dependencies::Changed / runtime requires]
+ - Class::Discover 1.000001 → 0
+ - Moose 0.89 → 0
+ - Moose::Autobox 0.09 → 0
+ - namespace::autoclean 0.08 → 0
+
+ [Dependencies::Changed / test requires]
+ - Test::More 0.92 → 0.88
+
+ [Dependencies::Removed / runtime requires]
+ - Carp
+ - Config::INI::Reader
+ - Dist::Zilla 2.101310
+ - Dist::Zilla::Role::MetaProvider
+ - List::MoreUtils 0.22
+ - Module::Extract::Namespaces 0.14
+ - Module::Extract::VERSION 0.13
+ - Moose::Role
+ - MooseX::Has::Sugar 0.0404
+ - MooseX::Types 0.19
+ - MooseX::Types::Moose 0.19
+ - aliased 0.30
+
+ [Dependencies::Removed / test requires]
+ - Data::Dumper
+ - File::Find::Rule 0.30
+ - File::Find::Rule::Perl 1.09
+ - FindBin
+ - Path::Class::Dir 0.17
+ - Path::Class::File 0.17
+ - Test::Builder::Module
+ - Test::Perl::Critic
 
 1.10034117 2010-07-24T05:37:49Z
  - Dropped xt/author/kwalitee.t to avoid the needless dep. ( Kwalitee Test
