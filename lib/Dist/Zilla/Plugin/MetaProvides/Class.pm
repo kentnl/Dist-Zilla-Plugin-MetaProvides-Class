@@ -6,7 +6,7 @@ BEGIN {
   $Dist::Zilla::Plugin::MetaProvides::Class::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Dist::Zilla::Plugin::MetaProvides::Class::VERSION = '1.14000000';
+  $Dist::Zilla::Plugin::MetaProvides::Class::VERSION = '1.14000001';
 }
 
 # ABSTRACT: Scans Dist::Zilla's .pm files and tries to identify classes using Class::Discover.
@@ -72,8 +72,8 @@ no Moose;
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -82,7 +82,7 @@ Dist::Zilla::Plugin::MetaProvides::Class - Scans Dist::Zilla's .pm files and tri
 
 =head1 VERSION
 
-version 1.14000000
+version 1.14000001
 
 =head1 ROLES
 
@@ -138,10 +138,9 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Kent Fredric.
+This software is copyright (c) 2013 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
