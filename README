@@ -1,0 +1,45 @@
+NAME
+    Dist::Zilla::Plugin::MetaProvides::Class - Scans Dist::Zilla's .pm files
+    and tries to identify classes using Class::Discover.
+
+VERSION
+    version 1.14000001
+
+ROLES
+  Dist::Zilla::Role::MetaProvider::Provider
+  "meta_noindex"
+    This is a utility for people who are also using "MetaNoIndex", so that
+    its settings can be used to eliminate items from the 'provides' list.
+
+    *   meta_noindex = 0
+
+        By default, do nothing unusual.
+
+    *   DEFAULT: meta_noindex = 1
+
+        When a module meets the criteria provided to "MetaNoIndex",
+        eliminate it from the metadata shipped to Dist::Zilla
+
+ROLE SATISFYING METHODS
+  provides
+    A conformant function to the Dist::Zilla::Role::MetaProvider::Provider
+    Role.
+
+   signature: $plugin->provides()
+   returns: Array of Dist::Zilla::MetaProvides::ProvideRecord
+PRIVATE METHODS
+  _classes_for
+   signature: $plugin->_classes_for( $filename, $file_content )
+   returns: Array of Dist::Zilla::MetaProvides::ProvideRecord
+SEE ALSO
+    *   Dist::Zilla::Plugin::MetaProvides
+
+AUTHOR
+    Kent Fredric <kentnl@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Kent Fredric.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
