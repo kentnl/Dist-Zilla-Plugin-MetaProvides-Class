@@ -1,13 +1,15 @@
 Revision history for Dist-Zilla-Plugin-MetaProvides-Class
 
-2.000000 2014-05-01T11:42:41Z
+2.000000 2014-05-01T12:15:40Z
  [00 Minor]
  - No substantial code changes in this release, mostly packaging.
- - Mostly hands free except for non-cpan downstream vendors who might work by HAND
+ - Mostly hands free except for non-cpan downstream vendors who might work
+   by HAND
 
  [01 Toolkit Change]
  - EUMM is now used instead of Module::Build
- - EUMM/Test depedencies are now only escallated to latest as recommendations.
+ - EUMM/Test depedencies are now only escallated to latest as
+   recommendations.
 
  [02 Version Scheme Change]
  - X.12345678 is now X.123456 ( mantissa 8 -> 6 )
