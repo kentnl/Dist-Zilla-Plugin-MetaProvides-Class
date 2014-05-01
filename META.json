@@ -128,7 +128,7 @@
    "provides" : {
       "Dist::Zilla::Plugin::MetaProvides::Class" : {
          "file" : "lib/Dist/Zilla/Plugin/MetaProvides/Class.pm",
-         "version" : "1.140000"
+         "version" : "2.000000"
       }
    },
    "release_status" : "stable",
@@ -143,7 +143,7 @@
          "web" : "https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-Class"
       }
    },
-   "version" : "1.140000",
+   "version" : "2.000000",
    "x_BuiltWith" : {
       "failures" : {
          "Class::Discover" : "module was not found in INC",
@@ -641,7 +641,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "1.140000-source",
+                  "tag" : "2.000000-source",
                   "tag_format" : "%v-source",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
@@ -700,7 +700,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : "releases",
                   "signed" : 0,
-                  "tag" : "1.140000",
+                  "tag" : "2.000000",
                   "tag_format" : "%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"

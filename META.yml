@@ -28,7 +28,7 @@ no_index:
 provides:
   Dist::Zilla::Plugin::MetaProvides::Class:
     file: lib/Dist/Zilla/Plugin/MetaProvides/Class.pm
-    version: '1.140000'
+    version: '2.000000'
 requires:
   Class::Discover: '0'
   Dist::Zilla::MetaProvides::ProvideRecord: '1.14000000'
@@ -44,7 +44,7 @@ resources:
   bugtracker: https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-Class/issues
   homepage: https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-Class
   repository: https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-Class.git
-version: '1.140000'
+version: '2.000000'
 x_BuiltWith:
   failures:
     Class::Discover: 'module was not found in INC'
@@ -443,7 +443,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: 1.140000-source
+          tag: 2.000000-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -488,7 +488,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: 0
-          tag: '1.140000'
+          tag: '2.000000'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
