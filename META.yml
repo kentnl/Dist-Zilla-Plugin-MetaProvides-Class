@@ -142,7 +142,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Bootstrap:
           distname: Dist-Zilla-Plugin-MetaProvides-Class
           fallback: '1'
-          try_built: ~
+          try_built: '1'
           try_built_method: mtime
       name: Bootstrap::lib
       version: '1.000001'
