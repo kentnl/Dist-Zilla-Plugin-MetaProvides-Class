@@ -15,6 +15,13 @@ use Class::Discover ();
 
 use Dist::Zilla::MetaProvides::ProvideRecord 2.000000;
 
+=head1 SYNOPSIS
+
+  [MetaProvides::Class]
+  meta_noindex    = 1  ; default > See :MetaProvider::Provider
+  inherit_version = 1  ; default > See :MetaProvider::Provider
+  inherit_missing = 1  ; default > See :MetaProvider::Provider
+
 =head1 ROLES
 
 =head2 C<::MetaProvider::Provider>
