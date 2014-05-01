@@ -22,7 +22,7 @@ ROLES
     *   DEFAULT: meta_noindex = 1
 
         When a module meets the criteria provided to "MetaNoIndex",
-        eliminate it from the metadata shipped to Dist::Zilla
+        eliminate it from the metadata shipped to "Dist::Zilla"
 
 ROLE SATISFYING METHODS
   provides

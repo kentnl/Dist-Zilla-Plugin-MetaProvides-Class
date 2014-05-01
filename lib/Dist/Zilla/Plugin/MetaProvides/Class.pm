@@ -162,7 +162,7 @@ By default, do nothing unusual.
 =item * DEFAULT: meta_noindex = 1
 
 When a module meets the criteria provided to L<< C<MetaNoIndex>|Dist::Zilla::Plugin::MetaNoIndex >>,
-eliminate it from the metadata shipped to L<Dist::Zilla>
+eliminate it from the metadata shipped to L<< C<Dist::Zilla>|Dist::Zilla >>
 
 =back
 
