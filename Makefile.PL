@@ -22,7 +22,7 @@ my %WriteMakefileArgs = (
   "NAME" => "Dist::Zilla::Plugin::MetaProvides::Class",
   "PREREQ_PM" => {
     "Class::Discover" => 0,
-    "Dist::Zilla::MetaProvides::ProvideRecord" => "1.14000000",
+    "Dist::Zilla::MetaProvides::ProvideRecord" => "2.000000",
     "Dist::Zilla::Plugin::MetaProvides" => "1.12044806",
     "Dist::Zilla::Role::MetaProvider::Provider" => 0,
     "Moose" => 0,
@@ -51,7 +51,7 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "Class::Discover" => 0,
-  "Dist::Zilla::MetaProvides::ProvideRecord" => "1.14000000",
+  "Dist::Zilla::MetaProvides::ProvideRecord" => "2.000000",
   "Dist::Zilla::Plugin::MetaProvides" => "1.12044806",
   "Dist::Zilla::Role::MetaProvider::Provider" => 0,
   "Dist::Zilla::Util::Test::KENTNL" => "0.01000011",

@@ -5,12 +5,13 @@ package Dist::Zilla::Plugin::MetaProvides::Class;
 $Dist::Zilla::Plugin::MetaProvides::Class::VERSION = '2.000000';
 # ABSTRACT: Scans Dist::Zilla's .pm files and tries to identify classes using Class::Discover.
 
-# $Id:$
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Moose;
 use Moose::Autobox;
 use Class::Discover ();
 
-use Dist::Zilla::MetaProvides::ProvideRecord 1.14000000;
+use Dist::Zilla::MetaProvides::ProvideRecord 2.000000;
 
 
 
