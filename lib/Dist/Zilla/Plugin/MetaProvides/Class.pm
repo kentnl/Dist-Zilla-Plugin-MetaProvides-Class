@@ -7,7 +7,7 @@ package Dist::Zilla::Plugin::MetaProvides::Class;
 
 # AUTHORITY
 
-use Moose;
+use Moose qw( has with );
 use Moose::Autobox;
 use Class::Discover ();
 
