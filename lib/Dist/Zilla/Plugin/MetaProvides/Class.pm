@@ -23,6 +23,13 @@ use Dist::Zilla::MetaProvides::ProvideRecord 2.000000;
 
 
 
+
+
+
+
+
+
+
 use namespace::autoclean;
 with 'Dist::Zilla::Role::MetaProvider::Provider';
 
@@ -139,6 +146,13 @@ Dist::Zilla::Plugin::MetaProvides::Class - Scans Dist::Zilla's .pm files and tri
 =head1 VERSION
 
 version 2.000000
+
+=head1 SYNOPSIS
+
+  [MetaProvides::Class]
+  meta_noindex    = 1  ; default > See :MetaProvider::Provider
+  inherit_version = 1  ; default > See :MetaProvider::Provider
+  inherit_missing = 1  ; default > See :MetaProvider::Provider
 
 =head1 ROLES
 

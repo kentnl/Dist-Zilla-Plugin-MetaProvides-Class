@@ -5,6 +5,12 @@ NAME
 VERSION
     version 2.000000
 
+SYNOPSIS
+      [MetaProvides::Class]
+      meta_noindex    = 1  ; default > See :MetaProvider::Provider
+      inherit_version = 1  ; default > See :MetaProvider::Provider
+      inherit_missing = 1  ; default > See :MetaProvider::Provider
+
 ROLES
   "::MetaProvider::Provider"
     "→ Dist::Zilla::Role::MetaProvider::Provider"
