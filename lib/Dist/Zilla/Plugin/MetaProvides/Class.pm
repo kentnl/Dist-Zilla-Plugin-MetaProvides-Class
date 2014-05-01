@@ -2,13 +2,7 @@ use strict;
 use warnings;
 
 package Dist::Zilla::Plugin::MetaProvides::Class;
-BEGIN {
-  $Dist::Zilla::Plugin::MetaProvides::Class::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Dist::Zilla::Plugin::MetaProvides::Class::VERSION = '1.14000001';
-}
-
+$Dist::Zilla::Plugin::MetaProvides::Class::VERSION = '1.140000';
 # ABSTRACT: Scans Dist::Zilla's .pm files and tries to identify classes using Class::Discover.
 
 # $Id:$
@@ -19,11 +13,46 @@ use Class::Discover ();
 use Dist::Zilla::MetaProvides::ProvideRecord 1.14000000;
 
 
+
+
+
+
+
 use namespace::autoclean;
 with 'Dist::Zilla::Role::MetaProvider::Provider';
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 has '+meta_noindex' => ( default => sub { 1 } );
+
+
+
+
+
+
+
+
+
+
+
 
 
 sub provides {
@@ -42,6 +71,15 @@ sub provides {
 
   return $self->_apply_meta_noindex(@records);
 }
+
+
+
+
+
+
+
+
+
 
 
 sub _classes_for {
@@ -67,6 +105,15 @@ sub _classes_for {
 }
 
 
+
+
+
+
+
+
+
+
+
 __PACKAGE__->meta->make_immutable;
 no Moose;
 
@@ -82,7 +129,7 @@ Dist::Zilla::Plugin::MetaProvides::Class - Scans Dist::Zilla's .pm files and tri
 
 =head1 VERSION
 
-version 1.14000001
+version 1.140000
 
 =head1 ROLES
 
@@ -138,7 +185,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
