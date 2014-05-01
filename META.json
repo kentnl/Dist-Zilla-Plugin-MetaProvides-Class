@@ -147,12 +147,12 @@
    "version" : "2.000000",
    "x_BuiltWith" : {
       "failures" : {
-         "Class::Discover" : "module was not found in INC",
          "MooseX::Declare" : "module was not found in INC"
       },
       "modules" : {
          "CPAN::Meta" : "2.140640",
          "CPAN::Meta::Requirements" : "2.125",
+         "Class::Discover" : "1.000003",
          "Dist::Zilla::MetaProvides::ProvideRecord" : "2.000000",
          "Dist::Zilla::Plugin::Authority" : "1.006",
          "Dist::Zilla::Plugin::AutoPrereqs" : "5.015",
