@@ -1,6 +1,26 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+ [00 Minor]
+ - No substantial code changes in this release, mostly packaging.
+ - Mostly hands free except for non-cpan downstream vendors who might work
+   by HAND
+
+ [01 Toolkit Change]
+ - EUMM is now used instead of Module::Build
+ - EUMM/Test depedencies are now only escallated to latest as
+   recommendations.
+
+ [02 Version Scheme Change]
+ - X.12345678 is now X.123456 ( mantissa 8 -> 6 )
+ - This is the primary reason for the 2.x on the box.
+
+ [Dependencies::Aggregate]
+ - 5.008009 : 217
+ - 5.010001 : 196
+ - 5.018002 : 181
+ - 5.019009 : 177
+
  [Dependencies::Stats]
  - Dependencies changed since 1.14000001, see Changes.deps{,.all,.dev} for
    details
