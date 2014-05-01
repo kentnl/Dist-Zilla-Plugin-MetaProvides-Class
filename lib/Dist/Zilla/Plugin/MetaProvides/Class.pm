@@ -21,8 +21,12 @@ use Dist::Zilla::MetaProvides::ProvideRecord 2.000000;
 
 
 
+
+
 use namespace::autoclean;
 with 'Dist::Zilla::Role::MetaProvider::Provider';
+
+
 
 
 
@@ -138,9 +142,13 @@ version 2.000000
 
 =head1 ROLES
 
-=head2 L<Dist::Zilla::Role::MetaProvider::Provider>
+=head2 C<::MetaProvider::Provider>
 
-=head2 L<< C<meta_noindex>|Dist::Zilla::Role::MetaProvider::Provider/meta_noindex >>
+L<< C<→ Dist::Zilla::Role::MetaProvider::Provider>|Dist::Zilla::Role::MetaProvider::Provider >>
+
+=head3 C<meta_noindex>
+
+Extended from L<< C<MetaProvider::Provider>|Dist::Zilla::Role::MetaProvider::Provider/meta_noindex >>
 
 This is a utility for people who are also using L<< C<MetaNoIndex>|Dist::Zilla::Plugin::MetaNoIndex >>,
 so that its settings can be used to eliminate items from the 'provides' list.
@@ -162,11 +170,11 @@ eliminate it from the metadata shipped to L<Dist::Zilla>
 
 =head2 provides
 
-A conformant function to the L<Dist::Zilla::Role::MetaProvider::Provider> Role.
+A conformant function to the L<< C<::MetaProvider::Provider>|Dist::Zilla::Role::MetaProvider::Provider >> Role.
 
 =head3 signature: $plugin->provides()
 
-=head3 returns: Array of L<Dist::Zilla::MetaProvides::ProvideRecord>
+=head3 returns: Array of L<< C<:MetaProvides::ProvideRecord>|Dist::Zilla::MetaProvides::ProvideRecord >>
 
 =head1 PRIVATE METHODS
 
@@ -174,13 +182,13 @@ A conformant function to the L<Dist::Zilla::Role::MetaProvider::Provider> Role.
 
 =head3 signature: $plugin->_classes_for( $filename, $file_content )
 
-=head3 returns: Array of L<Dist::Zilla::MetaProvides::ProvideRecord>
+=head3 returns: Array of L<< C<:MetaProvides::ProvideRecord>|Dist::Zilla::MetaProvides::ProvideRecord >>
 
 =head1 SEE ALSO
 
 =over 4
 
-=item * L<Dist::Zilla::Plugin::MetaProvides>
+=item * L<< C<[MetaProvides]>|Dist::Zilla::Plugin::MetaProvides >>
 
 =back
 
