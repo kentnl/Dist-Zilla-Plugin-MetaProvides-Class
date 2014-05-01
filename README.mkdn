@@ -8,9 +8,13 @@ version 2.000000
 
 # ROLES
 
-## [Dist::Zilla::Role::MetaProvider::Provider](https://metacpan.org/pod/Dist::Zilla::Role::MetaProvider::Provider)
+## `::MetaProvider::Provider`
 
-## [`meta_noindex`](https://metacpan.org/pod/Dist::Zilla::Role::MetaProvider::Provider#meta_noindex)
+[`→ Dist::Zilla::Role::MetaProvider::Provider`](https://metacpan.org/pod/Dist::Zilla::Role::MetaProvider::Provider)
+
+### `meta_noindex`
+
+Extended from [`MetaProvider::Provider`](https://metacpan.org/pod/Dist::Zilla::Role::MetaProvider::Provider#meta_noindex)
 
 This is a utility for people who are also using [`MetaNoIndex`](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaNoIndex),
 so that its settings can be used to eliminate items from the 'provides' list.
@@ -22,17 +26,17 @@ so that its settings can be used to eliminate items from the 'provides' list.
 - DEFAULT: meta\_noindex = 1
 
     When a module meets the criteria provided to [`MetaNoIndex`](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaNoIndex),
-    eliminate it from the metadata shipped to [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla)
+    eliminate it from the metadata shipped to [`Dist::Zilla`](https://metacpan.org/pod/Dist::Zilla)
 
 # ROLE SATISFYING METHODS
 
 ## provides
 
-A conformant function to the [Dist::Zilla::Role::MetaProvider::Provider](https://metacpan.org/pod/Dist::Zilla::Role::MetaProvider::Provider) Role.
+A conformant function to the [`::MetaProvider::Provider`](https://metacpan.org/pod/Dist::Zilla::Role::MetaProvider::Provider) Role.
 
 ### signature: $plugin->provides()
 
-### returns: Array of [Dist::Zilla::MetaProvides::ProvideRecord](https://metacpan.org/pod/Dist::Zilla::MetaProvides::ProvideRecord)
+### returns: Array of [`:MetaProvides::ProvideRecord`](https://metacpan.org/pod/Dist::Zilla::MetaProvides::ProvideRecord)
 
 # PRIVATE METHODS
 
@@ -40,11 +44,11 @@ A conformant function to the [Dist::Zilla::Role::MetaProvider::Provider](https:/
 
 ### signature: $plugin->\_classes\_for( $filename, $file\_content )
 
-### returns: Array of [Dist::Zilla::MetaProvides::ProvideRecord](https://metacpan.org/pod/Dist::Zilla::MetaProvides::ProvideRecord)
+### returns: Array of [`:MetaProvides::ProvideRecord`](https://metacpan.org/pod/Dist::Zilla::MetaProvides::ProvideRecord)
 
 # SEE ALSO
 
-- [Dist::Zilla::Plugin::MetaProvides](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaProvides)
+- [`[MetaProvides]`](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaProvides)
 
 # AUTHOR
 
