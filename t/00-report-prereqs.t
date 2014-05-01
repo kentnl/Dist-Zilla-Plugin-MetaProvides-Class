@@ -117,8 +117,9 @@ my $static_prereqs = do { my $x = {
                                       'Moose' => '0',
                                       'Moose::Autobox' => '0',
                                       'namespace::autoclean' => '0',
-                                      'perl' => '5.006',
+                                      'perl' => '5.008',
                                       'strict' => '0',
+                                      'utf8' => '0',
                                       'warnings' => '0'
                                     },
                       'suggests' => {
