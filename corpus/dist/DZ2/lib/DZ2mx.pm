@@ -7,11 +7,11 @@ use MooseX::Declare;
 
 class DZ2::Mx {
 
-}
+  }
 
-class DZ2::Mk {
+  class DZ2::Mk {
 
-}
+  }
 
-1;
+  1;
 
