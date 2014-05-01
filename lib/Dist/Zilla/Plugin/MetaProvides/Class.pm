@@ -5,7 +5,8 @@ package Dist::Zilla::Plugin::MetaProvides::Class;
 
 # ABSTRACT: Scans Dist::Zilla's .pm files and tries to identify classes using Class::Discover.
 
-# $Id:$
+# AUTHORITY
+
 use Moose;
 use Moose::Autobox;
 use Class::Discover ();
