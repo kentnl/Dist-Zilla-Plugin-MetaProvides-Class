@@ -53,6 +53,9 @@
  [Added / develop suggests]
  - Dist::Zilla::PluginBundle::Author::KENTNL::Lite v1.3.0
 
+ [Added / runtime requires]
+ - utf8
+
  [Added / test recommends]
  - CPAN::Meta
  - CPAN::Meta::Requirements 2.120900
@@ -64,6 +67,10 @@
  - File::Spec::Functions
  - List::Util
  - version
+
+ [Changed / runtime requires]
+ - Dist::Zilla::MetaProvides::ProvideRecord 1.14000000 → 2.000000
+ - perl 5.006 → 5.008
 
  [Changed / test requires]
  - Test::More 0.98 → 0.96
