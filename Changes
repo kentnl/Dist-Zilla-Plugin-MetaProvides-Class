@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-Plugin-MetaProvides-Class
 
-2.000001 2014-10-16T17:41:16Z db6ea87
+2.000001 2014-10-16T17:45:36Z a4c1860
  [Dependencies::Stats]
  - Dependencies changed since 2.000000, see misc/*.deps* for details
  - configure: ↓1 (recommends: ↑1)
@@ -9,6 +9,7 @@ Revision history for Dist-Zilla-Plugin-MetaProvides-Class
 
  [Metadata]
  - move repo to kentnl org
+ - add copyright holder details
 
 2.000000 2014-05-01T12:15:40Z
  [00 Minor]
