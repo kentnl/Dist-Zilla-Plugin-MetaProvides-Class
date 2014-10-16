@@ -1,10 +1,32 @@
-2.000000
- [Added / configure recommends]
- - ExtUtils::MakeMaker 6.96
+This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and OPTIONAL )
 
- [Added / configure requires]
- - ExtUtils::MakeMaker 6.30
+2.001000
+ [Added / develop requires]
+ - Dist::Zilla 5
+ - Dist::Zilla::Plugin::Author::KENTNL::RecommendFixes 0.001001
+ - Dist::Zilla::Plugin::BumpVersionAfterRelease
+ - Dist::Zilla::Plugin::CopyFilesFromBuild
+ - Dist::Zilla::Plugin::Git::Contributors 0.006
+ - Dist::Zilla::Plugin::Prereqs::AuthorDeps
+ - Dist::Zilla::Plugin::RewriteVersion::Sanitized
 
+ [Added / develop suggests]
+ - Dist::Zilla::App::Command::bakeini 0.001002
+ - Dist::Zilla::PluginBundle::Author::KENTNL 2.021000
+
+ [Changed / develop requires]
+ - Dist::Zilla::Plugin::Git::NextRelease 0 → 0.004000
+ - Test::Kwalitee 1.12 → 1.21
+
+ [Removed / develop requires]
+ - Dist::Zilla::Plugin::Git::NextVersion::Sanitized
+ - Dist::Zilla::Plugin::PkgVersion
+ - Dist::Zilla::PluginBundle::Author::KENTNL 2.013003
+
+ [Removed / develop suggests]
+ - Dist::Zilla::PluginBundle::Author::KENTNL::Lite v1.3.0
+
+2.000000 2014-05-01T12:15:40Z
  [Added / develop requires]
  - Dist::Zilla::Plugin::Authority 1.006
  - Dist::Zilla::Plugin::AutoPrereqs
@@ -53,34 +75,6 @@
  [Added / develop suggests]
  - Dist::Zilla::PluginBundle::Author::KENTNL::Lite v1.3.0
 
- [Added / runtime requires]
- - utf8
-
- [Added / test recommends]
- - CPAN::Meta
- - CPAN::Meta::Requirements 2.120900
- - ExtUtils::MakeMaker 6.96
- - Test::More 1.001003
-
- [Added / test requires]
- - ExtUtils::MakeMaker
- - File::Spec::Functions
- - List::Util
- - version
-
- [Changed / runtime requires]
- - Dist::Zilla::MetaProvides::ProvideRecord 1.14000000 → 2.000000
- - perl 5.006 → 5.008
-
- [Changed / test requires]
- - Test::More 0.98 → 0.96
-
- [Removed / build requires]
- - Module::Build 0.4004
-
- [Removed / configure requires]
- - Module::Build 0.4004
-
  [Removed / develop recommends]
  - Dist::Zilla::PluginBundle::Author::KENTNL::Lite v1.3.0
 
@@ -91,10 +85,6 @@
  [Removed / develop suggests]
  - Dist::Zilla::PluginBundle::Author::KENTNL v1.7.2
 
- [Removed / test requires]
- - File::Find
- - File::Temp
-
 1.14000001 2013-04-26T15:19:42Z
  [Added / develop requires]
  - Pod::Coverage::TrustPod
@@ -104,39 +94,17 @@
  - Test::Pod::Coverage 1.08
  - version 0.9901
 
- [Changed / build requires]
- - Module::Build 0.3601 → 0.4004
-
- [Changed / configure requires]
- - Module::Build 0.3601 → 0.4004
-
  [Changed / develop suggests]
  - Dist::Zilla::PluginBundle::Author::KENTNL v1.3.0 → v1.7.2
 
- [Changed / test requires]
- - Test::More 0.96 → 0.98
-
 1.14000000 2012-05-09T07:14:20Z
- [Added / runtime requires]
- - perl 5.006
- - strict
- - warnings
-
  [Changed / develop recommends]
  - Dist::Zilla::PluginBundle::Author::KENTNL::Lite 0.01009803 → v1.3.0
 
  [Changed / develop suggests]
  - Dist::Zilla::PluginBundle::Author::KENTNL v1.0.0 → v1.3.0
 
- [Changed / runtime requires]
- - Dist::Zilla::MetaProvides::ProvideRecord 0 → 1.14000000
-
- [Removed / test requires]
- - English
-
 1.12060501 2011-04-08T13:51:50Z
- [Changed / test requires]
- - Test::More 0.88 → 0.96
 
 1.12060312 2011-04-07T00:04:18Z
  [Added / develop recommends]
@@ -158,31 +126,11 @@
  - Dist::Zilla::PluginBundle::KENTNL 0.01017119
 
 1.12044911 2010-11-07T23:10:31Z
- [Added / test requires]
- - MooseX::Declare
 
 1.12044910 2010-11-07T22:56:20Z
  [Added / develop requires]
  - Dist::Zilla::Plugin::Bootstrap::lib
  - Dist::Zilla::Plugin::MetaNoIndex
-
- [Added / runtime suggests]
- - Dist::Zilla::Plugin::MetaNoIndex
-
- [Added / test requires]
- - Dist::Zilla::Util::Test::KENTNL 0.01000011
- - Test::Fatal
- - Test::Moose
-
- [Added / test suggests]
- - Dist::Zilla::Plugin::MetaNoIndex
-
- [Changed / runtime requires]
- - Dist::Zilla::Plugin::MetaProvides 1.11044405 → 1.12044806
-
- [Removed / test requires]
- - Dist::Zilla::App::Tester
- - MooseX::Declare
 
 1.11044406 2010-11-02T18:03:05Z
  [Added / develop recommends]
@@ -193,10 +141,4 @@
 
  [Added / develop suggests]
  - Dist::Zilla::PluginBundle::KENTNL 0.01017119
-
- [Added / test requires]
- - English
-
- [Changed / runtime requires]
- - Dist::Zilla::Plugin::MetaProvides 1.11034201 → 1.11044405
 

@@ -1,18 +1,31 @@
-2.000000
- [Added / configure recommends]
- - ExtUtils::MakeMaker 6.96
+This file contains changes in REQUIRED dependencies for standard CPAN phases (configure/build/runtime/test)
 
+2.001000
+ [Added / test requires]
+ - File::Spec
+ - Test::DZil
+
+ [Changed / configure requires]
+ - ExtUtils::MakeMaker 6.30 → 0
+
+ [Changed / test requires]
+ - Dist::Zilla::Util::Test::KENTNL 0.01000011 → 1.003002
+
+ [Removed / runtime requires]
+ - Moose::Autobox
+
+ [Removed / test requires]
+ - File::Spec::Functions
+ - List::Util
+ - MooseX::Declare
+ - version
+
+2.000000 2014-05-01T12:15:40Z
  [Added / configure requires]
  - ExtUtils::MakeMaker 6.30
 
  [Added / runtime requires]
  - utf8
-
- [Added / test recommends]
- - CPAN::Meta
- - CPAN::Meta::Requirements 2.120900
- - ExtUtils::MakeMaker 6.96
- - Test::More 1.001003
 
  [Added / test requires]
  - ExtUtils::MakeMaker
@@ -70,16 +83,10 @@
  - MooseX::Declare
 
 1.12044910 2010-11-07T22:56:20Z
- [Added / runtime suggests]
- - Dist::Zilla::Plugin::MetaNoIndex
-
  [Added / test requires]
  - Dist::Zilla::Util::Test::KENTNL 0.01000011
  - Test::Fatal
  - Test::Moose
-
- [Added / test suggests]
- - Dist::Zilla::Plugin::MetaNoIndex
 
  [Changed / runtime requires]
  - Dist::Zilla::Plugin::MetaProvides 1.11044405 → 1.12044806
