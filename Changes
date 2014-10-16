@@ -9,6 +9,7 @@ Revision history for {{$dist->name}}
 
  [Metadata]
  - move repo to kentnl org
+ - add copyright holder details
 
 2.000000 2014-05-01T12:15:40Z
  [00 Minor]
