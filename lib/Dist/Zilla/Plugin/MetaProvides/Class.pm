@@ -12,17 +12,9 @@ our $VERSION = '2.000001';
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose qw( has with );
-use Moose::Autobox;
 use Class::Discover ();
 
 use Dist::Zilla::MetaProvides::ProvideRecord 2.000000;
-
-
-
-
-
-
-
 
 
 
@@ -81,9 +73,9 @@ sub provides {
     $self->_classes_for( $_->name, $_->content );
   };
 
-  my (@files) = $self->zilla->files->flatten;
+  my (@files) = @{ $self->zilla->files };
 
-  my (@records) = @files->grep($perl_module)->map($get_records)->flatten;
+  my (@records) = map { $get_records->()} grep {$perl_module->()} @files;
 
   return $self->_apply_meta_noindex(@records);
 }
@@ -107,9 +99,9 @@ sub _classes_for {
   };
   my $to_record = sub {
     Dist::Zilla::MetaProvides::ProvideRecord->new(
-      module  => $_->keys->at(0),
+      module  => [ keys %{$_} ]->[0],
       file    => $filename,
-      version => $_->values->at(0)->{version},
+      version => [ values %{$_} ]->[0]->{version},
       parent  => $self,
     );
   };
@@ -117,7 +109,7 @@ sub _classes_for {
   # I'm being bad and using a private function, but meh.
   # We know this is bad :(
   ## no critic ( ProtectPrivateSubs )
-  return [ Class::Discover->_search_for_classes_in_file( $scanparams, \$content ) ]->map($to_record)->flatten;
+  return map { $to_record->() }  Class::Discover->_search_for_classes_in_file( $scanparams, \$content );
 }
 
 

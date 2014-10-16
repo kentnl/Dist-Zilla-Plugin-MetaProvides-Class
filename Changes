@@ -7,6 +7,9 @@ Revision history for Dist-Zilla-Plugin-MetaProvides-Class
  - develop: +7 ↑2 -3 (suggests: +2 -1)
  - test: +2 ↑1 -4 (recommends: ↑3 -1)
 
+ [Internals]
+ - Stop Autoboxing
+
  [Metadata]
  - move repo to kentnl org
  - add copyright holder details

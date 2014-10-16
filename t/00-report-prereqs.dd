@@ -76,7 +76,6 @@ do { my $x = {
                                       'Dist::Zilla::Plugin::MetaProvides' => '1.12044806',
                                       'Dist::Zilla::Role::MetaProvider::Provider' => '0',
                                       'Moose' => '0',
-                                      'Moose::Autobox' => '0',
                                       'namespace::autoclean' => '0',
                                       'perl' => '5.008',
                                       'strict' => '0',
