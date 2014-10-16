@@ -8,6 +8,10 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  - Dist::Zilla::Plugin::Git::Contributors 0.006
  - Dist::Zilla::Plugin::Prereqs::AuthorDeps
 
+ [Added / develop suggests]
+ - Dist::Zilla::App::Command::bakeini 0.001002
+ - Dist::Zilla::PluginBundle::Author::KENTNL 2.021000
+
  [Added / test requires]
  - File::Spec
 
@@ -19,13 +23,18 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
 
  [Changed / develop requires]
  - Dist::Zilla::Plugin::Git::NextRelease 0 → 0.004000
- - Dist::Zilla::PluginBundle::Author::KENTNL 2.013003 → 2.021000
  - Test::Kwalitee 1.12 → 1.21
 
  [Changed / test recommends]
  - CPAN::Meta 0 → 2.120900
  - ExtUtils::MakeMaker 6.96 → 6.98
  - Test::More 1.001003 → 1.001006
+
+ [Removed / develop requires]
+ - Dist::Zilla::PluginBundle::Author::KENTNL 2.013003
+
+ [Removed / develop suggests]
+ - Dist::Zilla::PluginBundle::Author::KENTNL::Lite v1.3.0
 
  [Removed / test recommends]
  - CPAN::Meta::Requirements 2.120900
