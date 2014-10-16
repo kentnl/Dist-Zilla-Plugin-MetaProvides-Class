@@ -137,13 +137,13 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-Class/issues"
+         "web" : "https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-Class/issues"
       },
-      "homepage" : "https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-Class",
+      "homepage" : "https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-Class",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-Class.git",
-         "web" : "https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-Class"
+         "url" : "https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-Class.git",
+         "web" : "https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-Class"
       }
    },
    "version" : "2.000001",
