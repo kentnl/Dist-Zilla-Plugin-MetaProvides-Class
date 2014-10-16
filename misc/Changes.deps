@@ -3,9 +3,13 @@ This file contains changes in REQUIRED dependencies for standard CPAN phases (co
 2.000001
  [Added / test requires]
  - File::Spec
+ - Test::DZil
 
  [Changed / configure requires]
  - ExtUtils::MakeMaker 6.30 → 0
+
+ [Changed / test requires]
+ - Dist::Zilla::Util::Test::KENTNL 0.01000011 → 1.003002
 
  [Removed / test requires]
  - File::Spec::Functions
