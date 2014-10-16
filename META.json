@@ -13,12 +13,6 @@
       "version" : "2"
    },
    "name" : "Dist-Zilla-Plugin-MetaProvides-Class",
-   "no_index" : {
-      "directory" : [
-         "corpus",
-         "t/lib"
-      ]
-   },
    "prereqs" : {
       "configure" : {
          "recommends" : {
@@ -118,7 +112,6 @@
             "Dist::Zilla::Util::Test::KENTNL" : "1.003002",
             "ExtUtils::MakeMaker" : "0",
             "File::Spec" : "0",
-            "MooseX::Declare" : "0",
             "Test::DZil" : "0",
             "Test::Fatal" : "0",
             "Test::Moose" : "0",
@@ -149,9 +142,6 @@
    },
    "version" : "2.000001",
    "x_BuiltWith" : {
-      "failures" : {
-         "MooseX::Declare" : "module was not found in INC"
-      },
       "modules" : {
          "CPAN::Meta" : "2.142690",
          "Class::Discover" : "1.000003",
@@ -853,17 +843,6 @@
             "class" : "Dist::Zilla::Plugin::Prereqs",
             "config" : {
                "Dist::Zilla::Plugin::Prereqs" : {
-                  "phase" : "test",
-                  "type" : "requires"
-               }
-            },
-            "name" : "TestRequires",
-            "version" : "5.020"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::Prereqs",
-            "config" : {
-               "Dist::Zilla::Plugin::Prereqs" : {
                   "phase" : "runtime",
                   "type" : "suggests"
                }
@@ -891,11 +870,6 @@
                }
             },
             "name" : "TestSuggests",
-            "version" : "5.020"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::MetaNoIndex",
-            "name" : "MetaNoIndex",
             "version" : "5.020"
          },
          {
