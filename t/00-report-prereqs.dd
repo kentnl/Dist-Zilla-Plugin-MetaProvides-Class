@@ -94,10 +94,11 @@ do { my $x = {
                                      'Test::More' => '1.001006'
                                    },
                    'requires' => {
-                                   'Dist::Zilla::Util::Test::KENTNL' => '0.01000011',
+                                   'Dist::Zilla::Util::Test::KENTNL' => '1.003002',
                                    'ExtUtils::MakeMaker' => '0',
                                    'File::Spec' => '0',
                                    'MooseX::Declare' => '0',
+                                   'Test::DZil' => '0',
                                    'Test::Fatal' => '0',
                                    'Test::Moose' => '0',
                                    'Test::More' => '0.96'
