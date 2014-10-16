@@ -11,12 +11,13 @@ try_built = 1
 [@Author::KENTNL]
 :version          = 2.021
 bumpversions      = 1
-twitter_hash_tags = #perl #cpan
+twitter_extra_hash_tags = #distzilla
 normal_form       = numify
 mantissa          = 6
 toolkit           = eumm
 toolkit_hardness  = soft
 copyfiles         = LICENSE
+srcreadme         = mkdn
 
 ;version_major = 1
 ;version_minor = 12
