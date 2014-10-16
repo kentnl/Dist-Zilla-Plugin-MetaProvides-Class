@@ -5,6 +5,8 @@ use utf8;
 
 package Dist::Zilla::Plugin::MetaProvides::Class;
 
+our $VERSION = '2.000001';
+
 # ABSTRACT: Scans Dist::Zilla's .pm files and tries to identify classes using Class::Discover.
 
 # AUTHORITY
