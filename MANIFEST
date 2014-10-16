@@ -13,6 +13,7 @@ README
 corpus/dist/DZ2/dist.ini
 corpus/dist/DZ2/lib/DZ2mx.pm
 dist.ini
+dist.ini.meta
 lib/Dist/Zilla/Plugin/MetaProvides/Class.pm
 maint-travis-ci/.gitrepo
 maint-travis-ci/.perltidyrc
