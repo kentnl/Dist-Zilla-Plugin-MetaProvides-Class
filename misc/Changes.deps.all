@@ -50,6 +50,7 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  [Removed / test requires]
  - File::Spec::Functions
  - List::Util
+ - MooseX::Declare
  - version
 
 2.000000 2014-05-01T12:15:40Z
