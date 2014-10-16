@@ -22,7 +22,7 @@ name: Dist-Zilla-Plugin-MetaProvides-Class
 provides:
   Dist::Zilla::Plugin::MetaProvides::Class:
     file: lib/Dist/Zilla/Plugin/MetaProvides/Class.pm
-    version: '2.000001'
+    version: '2.001000'
 requires:
   Class::Discover: '0'
   Dist::Zilla::MetaProvides::ProvideRecord: '2.000000'
@@ -38,7 +38,7 @@ resources:
   bugtracker: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-Class/issues
   homepage: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-Class
   repository: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-Class.git
-version: '2.000001'
+version: '2.001000'
 x_BuiltWith:
   modules:
     CPAN::Meta: '2.142690'
@@ -465,7 +465,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '0'
-          tag: 2.000001-source
+          tag: 2.001000-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -519,7 +519,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: '0'
-          tag: '2.000001'
+          tag: '2.001000'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
