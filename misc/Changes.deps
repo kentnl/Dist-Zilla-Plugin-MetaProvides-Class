@@ -11,6 +11,9 @@ This file contains changes in REQUIRED dependencies for standard CPAN phases (co
  [Changed / test requires]
  - Dist::Zilla::Util::Test::KENTNL 0.01000011 → 1.003002
 
+ [Removed / runtime requires]
+ - Moose::Autobox
+
  [Removed / test requires]
  - File::Spec::Functions
  - List::Util
