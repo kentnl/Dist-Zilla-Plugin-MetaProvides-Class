@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::MetaProvides::Class;
 
-our $VERSION = '2.001001';
+our $VERSION = '2.001002';
 
 # ABSTRACT: Scans Dist::Zilla's .pm files and tries to identify classes using Class::Discover.
 

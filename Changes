@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+2.001001 2017-03-08T10:08:02Z 3334cdb
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
  - Remove usage of Test::KENTNL/dztest
 
