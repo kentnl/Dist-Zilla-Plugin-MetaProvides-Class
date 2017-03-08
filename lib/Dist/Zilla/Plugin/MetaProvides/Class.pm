@@ -1,7 +1,6 @@
-use 5.008;    # 08 => utf8 , 06 => our , pragmas 04 => __PACKAGE__
+use 5.006;    # 06 => our , pragmas 04 => __PACKAGE__
 use strict;
 use warnings;
-use utf8;
 
 package Dist::Zilla::Plugin::MetaProvides::Class;
 
