@@ -23,7 +23,7 @@ name: Dist-Zilla-Plugin-MetaProvides-Class
 provides:
   Dist::Zilla::Plugin::MetaProvides::Class:
     file: lib/Dist/Zilla/Plugin/MetaProvides/Class.pm
-    version: '2.001001'
+    version: '2.001002'
 recommends:
   Moose: '2.000'
 requires:
@@ -40,4 +40,4 @@ resources:
   bugtracker: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-Class/issues
   homepage: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-Class
   repository: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-Class.git
-version: '2.001001'
+version: '2.001002'
