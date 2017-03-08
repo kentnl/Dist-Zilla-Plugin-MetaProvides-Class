@@ -4,7 +4,7 @@ Dist::Zilla::Plugin::MetaProvides::Class - Scans Dist::Zilla's .pm files and tri
 
 # VERSION
 
-version 2.001001
+version 2.001002
 
 # SYNOPSIS
 
