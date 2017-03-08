@@ -3,19 +3,15 @@ use warnings;
 
 use Test::More 0.96;
 use Test::Fatal;
-use Test::DZil qw( simple_ini );
+use Test::DZil qw( simple_ini Builder );
 use Test::Moose;
-use Dist::Zilla::Util::Test::KENTNL 1.003002 qw( dztest );
 
-my $test = dztest();
-$test->add_file(
-  'dist.ini',
-  simple_ini(
-    ['GatherDir'],    #
-    [ 'MetaProvides::Class' => { inherit_version => 0, inherit_missing => 1 } ],    #
-  )
+my $ini = simple_ini(
+  ['GatherDir'],    #
+  [ 'MetaProvides::Class' => { inherit_version => 0, inherit_missing => 1 } ],    #
 );
-$test->add_file( 'lib/DZ2mx.pm', <<'EOF');
+
+my $pm_file = <<'EOF';
 # ABSTRACT: turns baubles into trinkets
 
 use MooseX::Declare;
@@ -31,12 +27,23 @@ class DZ2::Mk {
 1;
 EOF
 
-$test->build_ok;
+my $zilla = Builder->from_config(
+  { dist_root => 'invalid' },
+  {
+    add_files => {
+      'source/dist.ini'     => $ini,
+      'source/lib/DZ2mx.pm' => $pm_file,
+    }
+  }
+);
+$zilla->chrome->logger->set_debug(1);
+$zilla->build;
+
 my $plugin;
 
 is(
   exception {
-    $plugin = $test->builder->plugin_named('MetaProvides::Class');
+    $plugin = $zilla->plugin_named('MetaProvides::Class');
   },
   undef,
   'Found MetaProvides::Class'

@@ -2,13 +2,14 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
+ - Remove usage of Test::KENTNL/dztest
 
  [Dependencies::Stats]
  - Dependencies changed since 2.001000, see misc/*.deps* for details
  - configure: +1 (recommends: ↑1)
  - develop: +11 ↑3 -3 (recommends: +1, suggests: ↑2)
  - runtime: ↓1 -1 (recommends: +1)
- - test: +1 (recommends: ↑1 ↓1)
+ - test: +1 -1 (recommends: ↑1 ↓1)
 
 2.001000 2014-10-16T19:13:57Z 7d672f0
  [Dependencies::Stats]
