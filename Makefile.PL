@@ -27,7 +27,6 @@ my %WriteMakefileArgs = (
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
-    "Dist::Zilla::Util::Test::KENTNL" => "1.003002",
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
     "Test::DZil" => 0,
@@ -47,7 +46,6 @@ my %FallbackPrereqs = (
   "Dist::Zilla::MetaProvides::ProvideRecord" => "2.000000",
   "Dist::Zilla::Plugin::MetaProvides" => "1.12044806",
   "Dist::Zilla::Role::MetaProvider::Provider" => 0,
-  "Dist::Zilla::Util::Test::KENTNL" => "1.003002",
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
   "Moose" => 0,

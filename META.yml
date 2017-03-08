@@ -3,7 +3,6 @@ abstract: "Scans Dist::Zilla's .pm files and tries to identify classes using Cla
 author:
   - 'Kent Fredric <kentnl@cpan.org>'
 build_requires:
-  Dist::Zilla::Util::Test::KENTNL: '1.003002'
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
   Test::DZil: '0'
