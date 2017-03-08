@@ -20,7 +20,7 @@
          },
          "requires" : {
             "ExtUtils::MakeMaker" : "0",
-            "perl" : "5.008"
+            "perl" : "5.006"
          }
       },
       "develop" : {
@@ -107,9 +107,8 @@
             "Dist::Zilla::Role::MetaProvider::Provider" : "0",
             "Moose" : "0",
             "namespace::autoclean" : "0",
-            "perl" : "5.008",
+            "perl" : "5.006",
             "strict" : "0",
-            "utf8" : "0",
             "warnings" : "0"
          },
          "suggests" : {
@@ -130,7 +129,7 @@
             "Test::Fatal" : "0",
             "Test::Moose" : "0",
             "Test::More" : "0.96",
-            "perl" : "5.008"
+            "perl" : "5.006"
          },
          "suggests" : {
             "Dist::Zilla::Plugin::MetaNoIndex" : "0"

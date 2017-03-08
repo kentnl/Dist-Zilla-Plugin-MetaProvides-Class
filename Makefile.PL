@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use 5.008;
+use 5.006;
 
 use ExtUtils::MakeMaker;
 
@@ -14,7 +14,7 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Dist-Zilla-Plugin-MetaProvides-Class",
   "LICENSE" => "perl",
-  "MIN_PERL_VERSION" => "5.008",
+  "MIN_PERL_VERSION" => "5.006",
   "NAME" => "Dist::Zilla::Plugin::MetaProvides::Class",
   "PREREQ_PM" => {
     "Class::Discover" => 0,
@@ -24,7 +24,6 @@ my %WriteMakefileArgs = (
     "Moose" => 0,
     "namespace::autoclean" => 0,
     "strict" => 0,
-    "utf8" => 0,
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
@@ -58,7 +57,6 @@ my %FallbackPrereqs = (
   "Test::More" => "0.96",
   "namespace::autoclean" => 0,
   "strict" => 0,
-  "utf8" => 0,
   "warnings" => 0
 );
 

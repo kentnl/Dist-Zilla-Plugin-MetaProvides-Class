@@ -1,13 +1,13 @@
 Revision history for Dist-Zilla-Plugin-MetaProvides-Class
 
-2.001001 2017-03-08T09:55:24Z e034306
+2.001001 2017-03-08T09:57:47Z 63e4a7e
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
 
  [Dependencies::Stats]
  - Dependencies changed since 2.001000, see misc/*.deps* for details
  - configure: +1 (recommends: ↑1)
  - develop: +11 ↑3 -3 (recommends: +1, suggests: ↑2)
- - runtime: (recommends: +1)
+ - runtime: ↓1 -1 (recommends: +1)
  - test: +1 (recommends: ↑1 ↓1)
 
 2.001000 2014-10-16T19:13:57Z 7d672f0
