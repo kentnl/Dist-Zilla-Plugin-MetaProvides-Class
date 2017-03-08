@@ -1,55 +1,28 @@
-NAME
-    Dist::Zilla::Plugin::MetaProvides::Class - Scans Dist::Zilla's .pm files
-    and tries to identify classes using Class::Discover.
+Dist::Zilla::Plugin::MetaProvides::Class
 
-VERSION
-    version 2.001000
 
-SYNOPSIS
-      [MetaProvides::Class]
-      meta_noindex    = 1  ; default > See :MetaProvider::Provider
-      inherit_version = 1  ; default > See :MetaProvider::Provider
-      inherit_missing = 1  ; default > See :MetaProvider::Provider
 
-ROLES
-  "::MetaProvider::Provider"
-    "→ Dist::Zilla::Role::MetaProvider::Provider"
+INSTALLATION
 
-   "meta_noindex"
-    Extended from "MetaProvider::Provider"
+This is a Perl module distribution. It should be installed with whichever
+tool you use to manage your installation of Perl, e.g. any of
 
-    This is a utility for people who are also using "MetaNoIndex", so that
-    its settings can be used to eliminate items from the 'provides' list.
+  cpanm .
+  cpan  .
+  cpanp -i .
 
-    *   meta_noindex = 0
+Consult http://www.cpan.org/modules/INSTALL.html for further instruction.
+Should you wish to install this module manually, the procedure is
 
-        By default, do nothing unusual.
-
-    *   DEFAULT: meta_noindex = 1
-
-        When a module meets the criteria provided to "MetaNoIndex",
-        eliminate it from the metadata shipped to "Dist::Zilla"
-
-ROLE SATISFYING METHODS
-  provides
-    A conformant function to the "::MetaProvider::Provider" Role.
-
-   signature: $plugin->provides()
-   returns: Array of ":MetaProvides::ProvideRecord"
-PRIVATE METHODS
-  _classes_for
-   signature: $plugin->_classes_for( $filename, $file_content )
-   returns: Array of ":MetaProvides::ProvideRecord"
-SEE ALSO
-    *   "[MetaProvides]"
-
-AUTHOR
-    Kent Fredric <kentnl@cpan.org>
+  perl Makefile.PL
+  make
+  make test
+  make install
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2014 by Kent Fredric
-    <kentfredric@gmail.com>.
 
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
+This software is copyright (c) 2017 by Kent Fredric
+<kentfredric@gmail.com>.
 
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
